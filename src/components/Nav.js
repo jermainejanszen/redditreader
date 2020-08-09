@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { TopNav, Image, Button } from 'bumbag';
+import { TopNav, Image, Button, Text } from 'bumbag';
 
 function Nav() {
     return (
@@ -14,13 +14,13 @@ function Nav() {
             </TopNav.Section>
             <TopNav.Section marginRight="major-2">
                 <TopNav.Item>
-                    <Button variant="ghost" palette="primary">Save</Button>
+                    <Button variant="ghost" palette="primary"><Text>Save</Text></Button>
                 </TopNav.Item>
                 <TopNav.Item>
-                    <Button variant="ghost" palette="primary">Load</Button>
+                    <Button variant="ghost" palette="primary"><Text>Load</Text></Button>
                 </TopNav.Item>
                 <TopNav.Item>
-                    <Button palette="primary">Play</Button>
+                    <Button palette="primary"><Text color="white">Play</Text></Button>
                 </TopNav.Item>
             </TopNav.Section>
         </TopNav>
