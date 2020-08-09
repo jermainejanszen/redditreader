@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, BrowserRouter as Router, Link} from "react-router-dom";
 import { Provider as BumbagProvider, PageWithHeader } from 'bumbag';
 import Nav from './Nav';
-import PostList from './PostList';
+import Post from './Post';
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
                     header={ <Nav /> }
                     border="default"
                 >
-                    <PostList />
+                    <Post />
                 </PageWithHeader>
             </BumbagProvider>
         </Router>
