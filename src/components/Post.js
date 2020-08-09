@@ -6,13 +6,15 @@ import CommentList from './CommentList';
 const firstComment = {
     text: "First Comment",
     user: "u/first",
-    upvotes: 2100
+    upvotes: 2100,
+    editMode: false,
 }
 
 const secondComment = {
     text: "Second Comment",
     user: "u/second",
-    upvotes: 743
+    upvotes: 743,
+    editMode: true,
 }
 
 const testComments = [firstComment, secondComment];
