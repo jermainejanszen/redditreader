@@ -3,11 +3,31 @@ import {Route, BrowserRouter as Router, Link} from "react-router-dom";
 import { Provider as BumbagProvider, PageWithHeader } from 'bumbag';
 import Nav from './Nav';
 import Body from './Body';
+import { theme } from '../styles';
 
-const theme = {
-    palette: {
-        primary: "#fe3e17",
-    }
+var content = {
+    post: {
+        text: "The post.",
+        user: "u/poster",
+        upvotes: 22100,
+        editMode: false,
+    },
+    comments: [
+        {
+            text: "First Comment",
+            user: "u/first",
+            upvotes: 2100,
+            editMode: false,
+            replies: []
+        },
+        {
+            text: "Second Comment",
+            user: "u/second",
+            upvotes: 743,
+            editMode: false,
+            replies: []
+        }
+    ]
 }
 
 function App() {
@@ -18,7 +38,7 @@ function App() {
                     header={ <Nav /> }
                     border="default"
                 >
-                    <Body />
+                    <Body content= {content} />
                 </PageWithHeader>
             </BumbagProvider>
         </Router>
