@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { TopNav, Image, Button, Text } from 'bumbag';
+import { TopNav, Image, Button, Text, useColorMode } from 'bumbag';
 
 function Nav() {
+
+    const { colorMode, setColorMode } = useColorMode();
+
     return (
         <TopNav>
             <TopNav.Section>
@@ -10,7 +13,7 @@ function Nav() {
                     <Image src="/logo.png" height="44px" />
                 </TopNav.Item>
                 <TopNav.Item href="#">New Post</TopNav.Item>
-                <TopNav.Item href="#">Add Comment</TopNav.Item>
+                <TopNav.Item onClick={() => setColorMode(colorMode === 'default' ? 'dark' : 'default')}>Color Mode</TopNav.Item>
             </TopNav.Section>
             <TopNav.Section marginRight="major-2">
                 <TopNav.Item>
