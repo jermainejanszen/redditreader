@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack } from 'bumbag';
+import { Stack, Heading, Button } from 'bumbag';
 import Comment from './Comment';
 
 export default function CommentList({ comments }) {
@@ -9,9 +9,20 @@ export default function CommentList({ comments }) {
     
     const [commentsState, setCommentsState] = useState(commentComps);
     
+    function addComment() {
+        const newComment = { user: "", upvotes: 0, text: "", editMode: true }
+        setCommentsState([...commentsState, <Comment commentProp={newComment} />])
+    }
+
     return (
-        <Stack>
-            {commentsState}
-        </Stack>
+        <div>
+            <div style={{display: 'flex', flexDirection: 'row', flexFlow: 'space-between', marginBottom: "1.8%"}} >
+                <Heading use="h3" style={{flexGrow: 1}}>Comments</Heading>
+                <Button onClick={addComment} >Add Comment</Button>
+            </div>
+            <Stack>
+                {commentsState}
+            </Stack>
+        </div>
     )
 }

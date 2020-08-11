@@ -12,12 +12,11 @@ export default function Body( {content} ) {
     return (
         <div style={postStyle}>
             <Heading use="h3">Post</Heading>
-            <Post post={content.post} />
+            <Post post={post} />
             <br />
             <Divider />
             <br />
-            <Heading use="h3">Comments</Heading>
-            <CommentList comments={content.comments} />
+            <CommentList comments={comments} />
         </div>
     )
 }
