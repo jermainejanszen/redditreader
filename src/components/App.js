@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, BrowserRouter as Router, Link} from "react-router-dom";
 import { Provider as BumbagProvider, PageWithHeader } from 'bumbag';
 import Nav from './Nav';
-import Post from './Post';
+import Body from './Body';
 
 const theme = {
     palette: {
@@ -18,7 +18,7 @@ function App() {
                     header={ <Nav /> }
                     border="default"
                 >
-                    <Post />
+                    <Body />
                 </PageWithHeader>
             </BumbagProvider>
         </Router>

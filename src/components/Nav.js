@@ -9,7 +9,7 @@ function Nav() {
                 <TopNav.Item href="/" fontWeight="semibold">
                     <Image src="/logo.png" height="44px" />
                 </TopNav.Item>
-                <TopNav.Item href="#">Edit Post</TopNav.Item>
+                <TopNav.Item href="#">New Post</TopNav.Item>
                 <TopNav.Item href="#">Add Comment</TopNav.Item>
             </TopNav.Section>
             <TopNav.Section marginRight="major-2">

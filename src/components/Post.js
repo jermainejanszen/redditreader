@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
-import { Divider, Heading, Stack, Card } from 'bumbag';
-import { postStyle } from '../styles';
-import CommentList from './CommentList';
+import React from 'react';
+import { Card, ActionButtons, Button } from 'bumbag';
 
-const firstComment = {
-    text: "First Comment",
-    user: "u/first",
-    upvotes: 2100,
-    editMode: false,
-}
-
-const secondComment = {
-    text: "Second Comment",
-    user: "u/second",
-    upvotes: 743,
-    editMode: true,
-}
-
-const testComments = [firstComment, secondComment];
-
-export default function Post() {
-
-    const [ comments, setComments ] = useState(testComments);
-
+export default function Post( { post } ) {
     return (
-        <div style={postStyle}>
-            <Heading use="h3">Post Title</Heading>
-            <Divider />
-            <br />
-            <CommentList comments={comments} />
-        </div>
+        <Card standalone>
+            <Card.Header>
+                <Card.Title>{post.user}</Card.Title>
+                {<p>Upvotes: <b>{post.upvotes}</b></p>}
+            </Card.Header>
+            <Card.Content>{post.text}</Card.Content>
+            <Card.Footer>
+                <ActionButtons
+                    cancelText="Delete"
+                    cancelProps={{ palette: "danger", variant: "outlined", disabled: true }}
+                    submitText="Edit"
+                    submitProps={{ palette: "default" }}
+                    justifyContent="flex-end"
+                />
+            </Card.Footer>
+        </Card>
     )
 }
