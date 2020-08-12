@@ -14,6 +14,7 @@ var content = {
     },
     comments: [
         {
+            id: 1,
             text: "First Comment",
             user: "u/first",
             upvotes: 2100,
@@ -21,6 +22,7 @@ var content = {
             replies: []
         },
         {
+            id: 2,
             text: "Second Comment",
             user: "u/second",
             upvotes: 743,
